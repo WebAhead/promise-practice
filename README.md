@@ -23,8 +23,6 @@ console.log("red");
 
 However once you have asynchronous code this gets harder to manage. You don't know how long each bit of code will take, so you have to make sure each line of code waits for the previous one.
 
-We've previously [used callbacks to solve this](/workshops/functions-callbacks-async/):
-
 ```js
 light("green", () => {
   light("amber", () => {
@@ -112,7 +110,7 @@ resolvesWithOne() // <- returns a promise that resolves with 1
 
 The magic part is that we can return sync _or_ async operations from a `.then`—promise objects don't care what kind of value is inside them. The next `.then` in the chain will always wait for the previous value to be ready.
 
-### Challenge 1: traffic lights again
+### Challenge: traffic lights again
 
 You're going to recreate the traffic lights from the callback workshop, but using promises to avoid nesting your callbacks.
 
@@ -123,6 +121,4 @@ You're going to recreate the traffic lights from the callback workshop, but usin
    - Wait 1 second then log this string
 1. Use `light` to log a sequence of traffic light colours with a one second pause between each
    E.g. `"green", "amber", "red", "amber", "red", "green", "finished"`
-
-Try not to let your callbacks go beyond a single level of nesting!
 
