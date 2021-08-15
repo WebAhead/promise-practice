@@ -1,14 +1,8 @@
----
-title: Promise practice
-description: Practice using promises to avoid "callback hell" in asynchronous JavaScript
-tags:
-  - workshop
-  - js
-keywords:
-  - js
-  - promises
-  - async
----
+# Promise practice
+
+Practice using promises to avoid "callback hell" in asynchronous JavaScript
+
+-----
 
 Running functions in sequence (one after another) is a common requirement. For example, triggering animations in order, or requesting some data then sending that response on to another API.
 
@@ -114,7 +108,7 @@ The magic part is that we can return sync _or_ async operations from a `.then`â€
 
 You're going to recreate the traffic lights from the callback workshop, but using promises to avoid nesting your callbacks.
 
-1. Download the starter files and open `challenge-1/index.html`
+1. Clone this repo and open `index.html`
 1. The pre-defined `wait` function is like `setTimeout`, except it returns a promise that resolves after waiting the specified number of milliseconds
 1. Use `wait` to write a `light` function. This should:
    - Take a colour string argument
